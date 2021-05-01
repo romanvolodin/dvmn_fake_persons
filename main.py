@@ -74,5 +74,6 @@ if __name__ == "__main__":
         makedirs('result', exist_ok=True)
 
         render_template(
-            "templates/charsheet.svg", f"result/person_{counter+1:04d}.svg", person
+            "templates/charsheet.svg",
+            f"result/person_{counter+1:04d}.svg", person
         )
