@@ -54,6 +54,8 @@ if __name__ == "__main__":
             convert_to_runic(skill) for skill in sample(SKILLS, 3)
         ]
 
+        skill_1, skill_2, skill_3 = runic_skills
+
         person = {
             "first_name": fake.first_name(),
             "last_name": fake.last_name(),
@@ -66,9 +68,9 @@ if __name__ == "__main__":
             "intelligence": randint(8, 14),
             "luck": randint(8, 14),
 
-            "skill_1": runic_skills[0],
-            "skill_2": runic_skills[1],
-            "skill_3": runic_skills[2],
+            "skill_1": skill_1,
+            "skill_2": skill_2,
+            "skill_3": skill_3,
         }
 
         makedirs('result', exist_ok=True)
