@@ -47,14 +47,14 @@ def convert_to_runic(input_string):
 
 
 if __name__ == "__main__":
+    runic_skills = [
+        convert_to_runic(skill) for skill in SKILLS
+    ]
+
     for counter in range(1, 11):
         fake = Faker("ru_RU")
 
-        runic_skills = [
-            convert_to_runic(skill) for skill in sample(SKILLS, 3)
-        ]
-
-        skill_1, skill_2, skill_3 = runic_skills
+        skill_1, skill_2, skill_3 = sample(runic_skills, 3)
 
         person = {
             "first_name": fake.first_name(),
