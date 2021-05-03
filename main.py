@@ -6,6 +6,8 @@ from faker import Faker
 from file_operations import render_template
 
 
+TOTAL_PERSONS = 10
+
 SKILLS = [
     "Воет на луну",
     "Обожает очереди",
@@ -51,7 +53,7 @@ if __name__ == "__main__":
         convert_to_runic(skill) for skill in SKILLS
     ]
 
-    for counter in range(1, 11):
+    for counter in range(1, TOTAL_PERSONS + 1):
         fake = Faker("ru_RU")
 
         skill_1, skill_2, skill_3 = sample(runic_skills, 3)
