@@ -47,7 +47,7 @@ def convert_to_runic(input_string):
 
 
 if __name__ == "__main__":
-    for counter in range(10):
+    for counter in range(1, 11):
         fake = Faker("ru_RU")
 
         runic_skills = [
@@ -75,5 +75,5 @@ if __name__ == "__main__":
 
         render_template(
             "templates/charsheet.svg",
-            f"result/person_{counter+1:04d}.svg", person
+            f"result/person_{counter:04d}.svg", person
         )
