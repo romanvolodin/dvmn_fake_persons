@@ -46,13 +46,9 @@ LETTERS = {
 }
 
 
-def convert_to_runic(input_string):
-    return "".join([LETTERS[char] for char in input_string])
-
-
 if __name__ == "__main__":
     runic_skills = [
-        convert_to_runic(skill) for skill in SKILLS
+        "".join([LETTERS[char] for char in skill]) for skill in SKILLS
     ]
 
     makedirs('result', exist_ok=True)
