@@ -7,6 +7,8 @@ from file_operations import render_template
 
 
 TOTAL_PERSONS = 10
+MIN_POINTS = 8
+MAX_POINTS = 14
 
 SKILLS = [
     "Воет на луну",
@@ -66,11 +68,11 @@ if __name__ == "__main__":
             "job": fake.job(),
             "town": fake.city(),
 
-            "strength": randint(8, 14),
-            "agility": randint(8, 14),
-            "endurance": randint(8, 14),
-            "intelligence": randint(8, 14),
-            "luck": randint(8, 14),
+            "strength": randint(MIN_POINTS, MAX_POINTS),
+            "agility": randint(MIN_POINTS, MAX_POINTS),
+            "endurance": randint(MIN_POINTS, MAX_POINTS),
+            "intelligence": randint(MIN_POINTS, MAX_POINTS),
+            "luck": randint(MIN_POINTS, MAX_POINTS),
 
             "skill_1": skill_1,
             "skill_2": skill_2,
