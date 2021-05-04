@@ -53,6 +53,8 @@ if __name__ == "__main__":
         convert_to_runic(skill) for skill in SKILLS
     ]
 
+    makedirs('result', exist_ok=True)
+
     for counter in range(1, TOTAL_PERSONS + 1):
         fake = Faker("ru_RU")
 
@@ -74,8 +76,6 @@ if __name__ == "__main__":
             "skill_2": skill_2,
             "skill_3": skill_3,
         }
-
-        makedirs('result', exist_ok=True)
 
         render_template(
             "templates/charsheet.svg",
